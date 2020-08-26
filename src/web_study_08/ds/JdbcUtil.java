@@ -11,12 +11,18 @@ public class JdbcUtil {
 	public static Connection getConnection() {
 		Connection conn = null;
 		String proptiesPath = "db.properties";
-		try (InputStream is = Thread.currentThread().getContextClassLoader().getResourceAsStream(proptiesPath)) {
+		try (InputStream is = Thread.currentThread()
+				.getContextClassLoader()
+				.getResourceAsStream(proptiesPath)) {
+			
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			
 			Properties props = new Properties();
 			props.load(is);
+			
 			String url = props.getProperty("url");
-			Class.forName("oracle.jdbc.driver.OracleDriver");
 			conn = DriverManager.getConnection(url, props);
+			
 		} catch (IOException e) {
 			System.out.println(e.getMessage());
 			e.printStackTrace();
@@ -27,4 +33,5 @@ public class JdbcUtil {
 		}
 		return conn;
 	}
+	
 }
