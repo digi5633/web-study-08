@@ -25,12 +25,10 @@
 		url="jdbc:oracle:thin:@127.0.0.1:1521:orcl"
 		username="jsp_study"
 		password="rootroot"
-		factory="oracle.jdbc.pool.OracleDataSourceFactory"
-		maxTotal="30"
-		maxIdle="30"
-		maxWaitMillis="1000"
 	/>
-	
+		<!-- maxTotal="30"
+		maxIdle="30"
+		maxWaitMillis="1000" -->
 </Context>
    
    

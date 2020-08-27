@@ -31,8 +31,8 @@
 	
 	<hr>
 	
-	<c:set var="con3" value="<%=JdbcUtilJNDI3.getConnection()%>"/>
-	<c:out value="${con3}"/>
+	<%-- <c:set var="con3" value="<%=JdbcUtilJNDI3.getConnection()%>"/>
+	<c:out value="${con3}"/> --%>
 	
 	</body>
 </html>
