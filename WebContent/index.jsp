@@ -1,4 +1,3 @@
-<%@page import="web_study_08.ds.JdbcUtilJNDI3"%>
 <%@page import="web_study_08.ds.JdbcUtilJNDI2"%>
 <%@page import="web_study_08.ds.JdbcUtilJNDI"%>
 <%@page import="web_study_08.ds.JdbcUtil"%>
